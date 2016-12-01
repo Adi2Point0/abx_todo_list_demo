@@ -1,11 +1,12 @@
 var Todo = require('./models/todo');
 
-function getTodos(res) {
-  Todo.find(function(err, todos) {
-    if (err) res.send(err)
-    res.json(todos);
+function getTodos() {
+  return new Promise(function(resolve, reject){
+    Todo.find(function(err, todos) {
+      return err ? reject(err) : resolve(todos);
+    });
   });
-};
+}
 
 module.exports = function(app) {
 
