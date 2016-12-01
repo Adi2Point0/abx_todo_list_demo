@@ -24,9 +24,13 @@ A simple TODO app built with Node.js, MongoDB and Angular.
 
 1. As a Developer, I want to convert callbacks to promises in 'app/routes.js' so that other developers can work faster.
 2. As a Developer, I want to add appropriate unit tests on the server side so that I can be sure the app API routes work.
+
 ## 3. As an End User, I want a validation message to appear when I click 'Add' but haven't entered a Todo. The message will state "Please enter a Todo".
+
 ## 4. As an End User, I want a validation message to appear when I add a Todo that is already in the list. The message will state "'x' is already in the Todo list".
+
 ## 5. As an End User, I want to be able to sort my Todos A-Z and Z-A so that I can find Todos in a long list easier.
+
 ## 6. As an End User, I want to store the date and time of when a Todo was added and have it display on the screen so that I can see when a Todo was entered. 
 
 ## Bug Reports
