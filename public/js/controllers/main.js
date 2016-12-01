@@ -17,6 +17,7 @@ angular.module('todoController', [])
             return;
           }
         }
+        $scope.loading = true;
         Todos.create($scope.formData)
           .success(function(data) {
             $scope.loading = false;
