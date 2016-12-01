@@ -11,8 +11,12 @@ angular.module('todoController', [])
 
     $scope.createTodo = function() {
       if ($scope.formData.text != undefined) {
-        $scope.loading = true;
-
+        for (var i = 0; i < $scope.todos.length; i++) {
+          if($scope.todos[i].text === $scope.formData.text) {
+            alert("That todo is already on the list!");
+            return;
+          }
+        }
         Todos.create($scope.formData)
           .success(function(data) {
             $scope.loading = false;
