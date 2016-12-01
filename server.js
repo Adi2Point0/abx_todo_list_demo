@@ -10,6 +10,10 @@ var methodOverride = require('method-override');
 
 mongoose.connect(database.url);
 
+// The most popular mongodb module
+var Promise = require("bluebird");
+Promise.promisifyAll(require("mongodb"));
+
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ 'extended': 'true' }));
