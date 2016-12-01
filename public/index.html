@@ -36,7 +36,7 @@
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
-						<button type="submit" class="btn btn-success btn-lg" ng-click="sortAZ">Sort A-Z</button>
+						<button type="submit" class="btn btn-success btn-lg" ng-click="sortAZ=!sortAZ">Sort A-Z</button>
 					</div>
 					</div>
 					<p class="text-center" ng-show="loading">
@@ -48,7 +48,7 @@
 
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
-				<div class="checkbox" ng-repeat="todo in todos">
+				<div class="checkbox" ng-repeat="todo in todos | orderBy: !sortAZ ? 'date' : 'text'">
 					<div class="row">
 						<div class="col-sm-4">
 						  <p>{{ todo.text }}</p>
