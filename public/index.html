@@ -54,7 +54,7 @@
 						  <p>{{ todo.text }}</p>
 						</div>
 						<div class="col-sm-4">
-						  <p>TODO Created Date here...</p>
+						  <p>{{ todo.created | date:"MM/dd/yyyy 'at' h:mma" }}</p>
 						</div>
 						<div class="col-sm-4">
 						  <input type="button" value="Delete" class="btn btn-danger" ng-click="deleteTodo(todo._id)">
