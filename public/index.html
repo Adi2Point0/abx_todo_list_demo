@@ -46,9 +46,17 @@
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
 				<div class="checkbox" ng-repeat="todo in todos">
-					<label>
-						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
-					</label>
+					<div class="row">
+						<div class="col-sm-4">
+						  <p>{{ todo.text }}</p>
+						</div>
+						<div class="col-sm-4">
+						  <p>TODO Created Date here...</p>
+						</div>
+						<div class="col-sm-4">
+						  <input type="button" value="Delete" class="btn btn-danger" ng-click="deleteTodo(todo._id)">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
