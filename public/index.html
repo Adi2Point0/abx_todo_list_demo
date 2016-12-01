@@ -43,7 +43,9 @@
 						<span class="fa fa-spinner fa-spin fa-3x"></span>
 					</p>
 				</form>
-				<button type="submit" class="btn btn-success btn-lg" ng-click="sortAZ=!sortAZ">Sort A-Z</button>
+				<button type="submit" class="btn btn-success btn-lg" ng-click="predicate = 'name'; reverse = !reverse">
+					Sort A-Z
+				</button>
 			</div>
 		</div>
 			</div>
@@ -51,7 +53,7 @@
 
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
-				<div class="checkbox" ng-repeat="todo in todos | orderBy: !sortAZ ? 'date' : 'text'">
+				<div class="checkbox" ng-repeat="todo in todos | orderBy:'text':reverse">
 					<div class="row">
 						<div class="col-sm-4">
 						  <p>{{ todo.text }}</p>
