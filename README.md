@@ -1,5 +1,11 @@
 # ABX Developer Test
 
+### Jack's Notes
+
+ - Created a new branch to work on promises with bluebird.
+ - Couldn't quite work it out..
+
+
 A simple TODO app built with Node.js, MongoDB and Angular.
 
 - Node provides the RESTful API. Angular provides the frontend and accesses the API. MongoDB stores the data.
