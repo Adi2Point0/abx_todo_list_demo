@@ -8,6 +8,14 @@ function getTodos() {
   });
 }
 
+function createTodos(data){
+  return new Promise(function(resolve, reject){
+    Todo.create({text:data.text,done:false}, function(err, todos){
+      return err ? reject(err) : resolve(todos);
+    })
+  });
+}
+
 module.exports = function(app) {
 
   app.get('/api/todos', function(req, res) {
